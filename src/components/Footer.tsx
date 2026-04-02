@@ -54,7 +54,19 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4: Contact */}
+          {/* Column 4: Careers */}
+          <div className="col-span-1">
+            <h4 className="font-body text-[11px] font-semibold tracking-[0.14em] uppercase text-foreground mb-5">{t(translations.footer.careers)}</h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="#join-team" onClick={(e) => handleAnchor(e, "#join-team")} className="font-body text-[15px] text-muted-foreground hover:text-foreground transition-colors">
+                  {t(translations.nav.joinTeam)}
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 5: Contact */}
           <div className="col-span-1">
             <h4 className="font-body text-[11px] font-semibold tracking-[0.14em] uppercase text-foreground mb-5">{t(translations.footer.contactTitle)}</h4>
             <ul className="space-y-4">
@@ -71,23 +83,6 @@ const Footer = () => {
                 <div className="font-body text-[15px] text-muted-foreground whitespace-pre-line">
                   {t(translations.footer.hoursShort)}
                 </div>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 5: Additional info */}
-          <div className="col-span-1">
-            <h4 className="font-body text-[11px] font-semibold tracking-[0.14em] uppercase text-foreground mb-5">{t(translations.footer.quickLinks)}</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#stylists" onClick={(e) => handleAnchor(e, "#stylists")} className="font-body text-[15px] text-muted-foreground hover:text-foreground transition-colors">
-                  {t(translations.nav.stylists)}
-                </a>
-              </li>
-              <li>
-                <a href="#portfolio" onClick={(e) => handleAnchor(e, "#portfolio")} className="font-body text-[15px] text-muted-foreground hover:text-foreground transition-colors">
-                  {t(translations.nav.portfolio)}
-                </a>
               </li>
             </ul>
           </div>
