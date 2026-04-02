@@ -93,7 +93,7 @@ const HeroSlider = () => {
   };
 
   const slide = heroSlides[current];
-  const content = slide.content === null ? null : slide.contentKey ? translations.hero[slide.contentKey] : null;
+  const content = slide.contentKey ? translations.hero[slide.contentKey] : null;
 
   return (
     <section id="home" className="relative min-h-[85vh] md:min-h-[92vh] flex items-end pb-12 md:pb-24 overflow-hidden">
