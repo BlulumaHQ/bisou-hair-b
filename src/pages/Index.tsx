@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, Phone, MapPin, Clock, ChevronDown, Send, Instagram } from "lucide-react";
+import SocialIcons from "@/components/SocialIcons";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import useEmblaCarousel from "embla-carousel-react";
