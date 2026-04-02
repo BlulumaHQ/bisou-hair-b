@@ -29,7 +29,7 @@ const Footer = () => {
           {/* Column 1: Logo + tagline + social */}
           <div className="col-span-1">
             <a href="#home" onClick={(e) => handleAnchor(e, "#home")} className="inline-block mb-4">
-              <img src={BISOU_LOGO} alt="Bisou Hair Salon" className="h-[50px] w-auto" />
+              <img src={bisouLogo} alt="Bisou Hair Salon" className="h-[50px] w-auto" />
             </a>
             <p className="font-body text-[14px] text-muted-foreground leading-relaxed mb-5">
               {t(translations.footer.tagline)}
