@@ -2,8 +2,7 @@ import { Phone, MapPin, Clock } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import SocialIcons from "./SocialIcons";
-
-const BISOU_LOGO = "https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-Hair-salon-logo.png";
+import bisouLogo from "@/assets/bisou-logo.webp";
 
 const handleAnchor = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
   e.preventDefault();
