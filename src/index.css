@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 12%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 12%;
+
+    --primary: 92 8% 34%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 126 11% 49%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 40 10% 96%;
+    --accent-foreground: 0 0% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
+    --ring: 92 8% 34%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+
+  .container-site {
+    @apply max-w-6xl mx-auto px-5 md:px-8;
+  }
+
+  .hero-title {
+    @apply font-heading font-bold leading-[1.08] tracking-tight;
+    font-size: clamp(2.75rem, 5vw + 1rem, 4.75rem);
+  }
+
+  .section-title {
+    @apply font-heading text-[1.75rem] md:text-[2.125rem] lg:text-[2.5rem] font-bold text-foreground;
+  }
+
+  .section-label {
+    @apply font-body text-[13px] tracking-[0.2em] uppercase text-secondary font-semibold mb-3 block;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-7 py-3.5 bg-primary text-primary-foreground font-body font-semibold text-[15px] tracking-wide rounded-md transition-all duration-300 hover:opacity-90;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-7 py-3.5 border border-foreground/20 text-foreground font-body font-medium text-[15px] tracking-wide rounded-md transition-all duration-300 hover:bg-foreground hover:text-background;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-5 py-2.5 text-foreground font-body font-medium text-[15px] tracking-wide rounded-md transition-all duration-300 hover:bg-muted;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset for sticky header */
+section[id] {
+  scroll-margin-top: 88px;
+}
