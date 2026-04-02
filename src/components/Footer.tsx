@@ -1,9 +1,9 @@
 import { Phone, MapPin, Clock } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
+import SocialIcons from "./SocialIcons";
 
-const BOOKING_URL =
-  "https://www.fresha.com/book-now/bisou-hair-salon-zc41qh7e/all-offer?share=true&pId=129242";
+const BISOU_LOGO = "https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-Hair-salon-logo.png";
 
 const handleAnchor = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
   e.preventDefault();
@@ -25,17 +25,24 @@ const Footer = () => {
   return (
     <footer className="border-t border-border">
       <div className="container-site py-8 md:py-16 lg:py-20">
-        {/* Desktop layout */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6">
-          <div className="lg:col-span-1">
+        {/* Desktop layout — 5 columns with col 2 empty */}
+        <div className="hidden md:grid md:grid-cols-5 gap-6 lg:gap-8">
+          {/* Column 1: Logo + tagline + social */}
+          <div className="col-span-1">
             <a href="#home" onClick={(e) => handleAnchor(e, "#home")} className="inline-block mb-4">
-              <span className="font-heading text-xl font-bold text-foreground">Bisou Hair Salon</span>
+              <img src={BISOU_LOGO} alt="Bisou Hair Salon" className="h-[50px] w-auto" />
             </a>
-            <p className="font-body text-[15px] text-muted-foreground leading-relaxed">
+            <p className="font-body text-[14px] text-muted-foreground leading-relaxed mb-5">
               {t(translations.footer.tagline)}
             </p>
+            <SocialIcons />
           </div>
-          <div>
+
+          {/* Column 2: Intentionally empty */}
+          <div className="col-span-1" />
+
+          {/* Column 3: Navigation */}
+          <div className="col-span-1">
             <h4 className="font-body text-[11px] font-semibold tracking-[0.14em] uppercase text-foreground mb-5">{t(translations.footer.navigation)}</h4>
             <ul className="space-y-3">
               {footerNav.map((link) => (
@@ -47,17 +54,9 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div>
-            <h4 className="font-body text-[11px] font-semibold tracking-[0.14em] uppercase text-foreground mb-5">{t(translations.footer.quickLinks)}</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="font-body text-[15px] text-muted-foreground hover:text-foreground transition-colors">
-                  {t(translations.nav.bookAppointment)}
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
+
+          {/* Column 4: Contact */}
+          <div className="col-span-1">
             <h4 className="font-body text-[11px] font-semibold tracking-[0.14em] uppercase text-foreground mb-5">{t(translations.footer.contactTitle)}</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
@@ -76,14 +75,35 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
+          {/* Column 5: Additional info */}
+          <div className="col-span-1">
+            <h4 className="font-body text-[11px] font-semibold tracking-[0.14em] uppercase text-foreground mb-5">{t(translations.footer.quickLinks)}</h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="#stylists" onClick={(e) => handleAnchor(e, "#stylists")} className="font-body text-[15px] text-muted-foreground hover:text-foreground transition-colors">
+                  {t(translations.nav.stylists)}
+                </a>
+              </li>
+              <li>
+                <a href="#portfolio" onClick={(e) => handleAnchor(e, "#portfolio")} className="font-body text-[15px] text-muted-foreground hover:text-foreground transition-colors">
+                  {t(translations.nav.portfolio)}
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        {/* Mobile compact layout */}
+        {/* Mobile layout */}
         <div className="md:hidden">
-          <a href="#home" onClick={(e) => handleAnchor(e, "#home")} className="inline-block mb-4">
-            <span className="font-heading text-xl font-bold text-foreground">Bisou Hair Salon</span>
-          </a>
-          <div className="grid grid-cols-2 gap-x-6 gap-y-6">
+          <div className="text-center mb-6">
+            <a href="#home" onClick={(e) => handleAnchor(e, "#home")} className="inline-block mb-4">
+              <img src={BISOU_LOGO} alt="Bisou Hair Salon" className="h-[44px] w-auto mx-auto" />
+            </a>
+            <SocialIcons className="justify-center" />
+          </div>
+
+          <div className="border-t border-border pt-6 grid grid-cols-2 gap-x-6 gap-y-6">
             <div>
               <h4 className="font-body text-[11px] font-semibold tracking-[0.14em] uppercase text-foreground mb-3">{t(translations.footer.navigation)}</h4>
               <ul className="space-y-2">
@@ -112,9 +132,6 @@ const Footer = () => {
                   <span className="font-body text-[13px] text-muted-foreground whitespace-pre-line">{t(translations.footer.hoursShort)}</span>
                 </li>
               </ul>
-              <div className="mt-4 space-y-1.5">
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="font-body text-[13px] text-muted-foreground hover:text-foreground transition-colors block">{t(translations.nav.bookAppointment)} →</a>
-              </div>
             </div>
           </div>
         </div>
