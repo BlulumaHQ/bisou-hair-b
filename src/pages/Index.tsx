@@ -64,7 +64,7 @@ const heroImages = [
 const heroSlides = [
   {
     image: heroImages[0],
-    imagePositionClassName: "object-center",
+    imagePositionClassName: "object-bottom",
     content: null,
   },
   {
