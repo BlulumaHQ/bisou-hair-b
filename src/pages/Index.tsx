@@ -328,6 +328,9 @@ const Index = () => {
               <motion.p variants={reveal} custom={3} className="font-body text-muted-foreground leading-[1.8] text-base">
                 {t(translations.about.p2)}
               </motion.p>
+              <motion.div variants={reveal} custom={4} className="mt-6">
+                <SocialIcons />
+              </motion.div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
