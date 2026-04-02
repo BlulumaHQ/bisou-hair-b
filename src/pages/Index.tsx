@@ -56,7 +56,6 @@ const portfolioImages = [
 
 /* ── Hero slides data ── */
 const heroImages = [
-  "https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-hair-pic-5.jpg",
   "https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-hair-pic-7.jpg",
   "https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-hair-pic-9.jpg",
 ];
@@ -64,16 +63,11 @@ const heroImages = [
 const heroSlides = [
   {
     image: heroImages[0],
-    imagePositionClassName: "object-bottom",
-    content: null,
-  },
-  {
-    image: heroImages[1],
     imagePositionClassName: "object-center",
     contentKey: "slide2" as const,
   },
   {
-    image: heroImages[2],
+    image: heroImages[1],
     imagePositionClassName: "object-center",
     contentKey: "slide3" as const,
   },
@@ -99,7 +93,7 @@ const HeroSlider = () => {
   };
 
   const slide = heroSlides[current];
-  const content = slide.content === null ? null : slide.contentKey ? translations.hero[slide.contentKey] : null;
+  const content = slide.contentKey ? translations.hero[slide.contentKey] : null;
 
   return (
     <section id="home" className="relative min-h-[85vh] md:min-h-[92vh] flex items-end pb-12 md:pb-24 overflow-hidden">
