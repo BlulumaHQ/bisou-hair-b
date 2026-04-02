@@ -92,7 +92,7 @@ const Footer = () => {
         <div className="md:hidden">
           <div className="text-center mb-6">
             <a href="#home" onClick={(e) => handleAnchor(e, "#home")} className="inline-block mb-4">
-              <img src={BISOU_LOGO} alt="Bisou Hair Salon" className="h-[44px] w-auto mx-auto" />
+              <img src={bisouLogo} alt="Bisou Hair Salon" className="h-[44px] w-auto mx-auto" />
             </a>
             <SocialIcons className="justify-center" />
           </div>
