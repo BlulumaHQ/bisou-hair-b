@@ -7,6 +7,7 @@ import SEOHead from "@/components/SEOHead";
 import useEmblaCarousel from "embla-carousel-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
+import aboutImage from "@/assets/bisoul-hair-pic-88.jpg";
 
 const BOOKING_URL =
   "https://www.fresha.com/book-now/bisou-hair-salon-zc41qh7e/all-offer?share=true&pId=129242";
@@ -334,7 +335,7 @@ const Index = () => {
               className="aspect-[4/5] overflow-hidden"
             >
               <img
-                src="https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-hair-pic-9.jpg"
+                src={aboutImage}
                 alt="Bisou Hair Salon interior"
                 className="w-full h-full object-cover"
               />
