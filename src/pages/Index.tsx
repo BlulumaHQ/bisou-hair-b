@@ -4,58 +4,75 @@ import { Star, Phone, MapPin, Clock, ChevronDown, Send, Instagram } from "lucide
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import useEmblaCarousel from "embla-carousel-react";
-import heroSlide1 from "@/assets/hero-slide-1.webp";
-import heroSlide2 from "@/assets/hero-slide-2.webp";
-import heroSlide3 from "@/assets/hero-slide-3.webp";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 
 const BOOKING_URL =
-  "https://www.fresha.com/a/initial-salon-richmond-6386-no-3-road-kr9spcrw/all-offer?menu=true&rwg_token=AJKvS9UQy7d34XWVYz7Y2UcNMMI0llYMKBzKtJ-ix_hcoOULUtHkYyx4zXbut-9xmCflwhAa8Da7oKG28yDyZbEloWPcwryVjw%3D%3D&gei=7VnqZrP2Aorx0PEPoLbVsQ8";
+  "https://www.fresha.com/book-now/bisou-hair-salon-zc41qh7e/all-offer?share=true&pId=129242";
 
 /* ── Stylists Data ── */
 const stylists = [
-  { name: "KEN", title: "HR Manager", img: "https://initialsalon.com/wp-content/uploads/2024/08/initial-hair-pic-51.jpg", instagram: "https://www.instagram.com/ken07kei/" },
-  { name: "SUMMER", title: "Manager", img: "https://initialsalon.com/wp-content/uploads/2024/08/initial-hair-pic-49.jpg", instagram: "https://www.instagram.com/hellosum.mer/" },
-  { name: "JAMES", title: "Stylist", img: "https://initialsalon.com/wp-content/uploads/2024/08/initial-hair-pic-50.jpg", instagram: "https://www.instagram.com/jamesrickking/" },
-  { name: "HUBERT", title: "Stylist", img: "https://initialsalon.com/wp-content/uploads/2024/08/initial-hair-pic-52.jpg", instagram: "https://www.instagram.com/hubert_hairstar/" },
-  { name: "HIKASO", title: "Stylist", img: "https://initialsalon.com/wp-content/uploads/2024/08/initial-hair-pic-22.jpg", instagram: "https://www.instagram.com/hikasoooo/" },
-  { name: "Ayane Oda", title: "Stylist", img: "https://initialsalon.com/wp-content/uploads/2025/11/initial-hair-pic-222.jpg", instagram: "https://www.instagram.com/ayane_oda" },
-  { name: "ANGUS", title: "Stylist", img: "https://initialsalon.com/wp-content/uploads/2024/08/initial-hair-pic-23.jpg", instagram: "https://www.instagram.com/angus_hero/" },
-  { name: "MAKO", title: "Stylist", img: "https://initialsalon.com/wp-content/uploads/2024/08/initial-hair-pic-54.jpg", instagram: "https://www.instagram.com/mako_vancouver_hairstylist/" },
-  { name: "Wanda", title: "Stylist", img: "https://initialsalon.com/wp-content/uploads/2025/03/%E6%9C%AA%E5%91%BD%E5%90%8D%E8%A8%AD%E8%A8%88-6.jpg", instagram: "https://www.instagram.com/wanda.hairstylist.vancouver" },
-  { name: "Emi", title: "Stylist", img: "https://initialsalon.com/wp-content/uploads/2025/11/initial-hair-pic-1333.jpg", instagram: "https://www.instagram.com/initial_hair_salon/" },
-  { name: "DONNA", title: "Stylist", img: "https://initialsalon.com/wp-content/uploads/2024/08/initial-hair-pic-42.jpg", instagram: "https://www.instagram.com/initial_hair_salon/" },
-  { name: "STELLA", title: "G.M", img: "https://initialsalon.com/wp-content/uploads/2024/08/initial-hair-pic-20.jpg", instagram: "https://www.instagram.com/initial_hair_salon/" },
-  { name: "Hiro", title: "Stylist", img: "https://initialsalon.com/wp-content/uploads/2024/09/initial-hair-hero-6.jpg", instagram: "https://www.instagram.com/hiro_masa.hair" },
-  { name: "Meg", title: "Stylist", img: "https://initialsalon.com/wp-content/uploads/2026/01/initial-hair-pic-1888.png", instagram: "https://www.instagram.com/iki_meguo" },
+  { name: "DONNA", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-42.jpg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
+  { name: "VIVI", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-44.jpg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
+  { name: "FIONA", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-40.jpg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
+  { name: "ANGEL", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2025/03/%E6%9C%AA%E5%91%BD%E5%90%8D%E8%A8%AD%E8%A8%88.png-1.jpeg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
+  { name: "DOLLY", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-39.jpg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
+  { name: "HUBERT", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-46.jpg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
+  { name: "YUWEI", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-pic-yu-we5.jpg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
+  { name: "JAMIE", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-pic-jamie2.jpg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
 ];
 
 const testimonials = [
-  { text: "I am so happy with the results! This was my first time getting my hair dyed and I was nervous because I have very curly hair. Ayaka was so kind, she explained the process and she knew how to style curls! Throughout the whole process she was very considerate and I love how my hair turned out! Definitely recommend!", author: "Tania L." },
-  { text: "I recently visited Mako for a haircut, and I couldn't be happier with the experience. Mako provided excellent suggestions on which hairstyle would suit me best. He was incredibly attentive, paid great attention to detail, and was thorough with his cut. I left feeling confident and satisfied with the results. Highly recommend!", author: "David" },
-  { text: "The hairstylist Summer did the lightening and coloring for my hair, she is awesome! She spent time with you to discuss what color is right for you and it looks so good! I will definitely go back for her 😊", author: "Ming H." },
-  { text: "I have curly wavy hair, and Ken was knowledgeable on how to handle colour on my hair to ensure that hair damage is controlled; it was a pleasure to see my hair being taken care of!", author: "Angela T." },
-  { text: "I always enjoy my visit to Initial Salon... the atmosphere is so calming & relaxing. As usual I leave feeling like a million dollars, and absolutely love my haircut.", author: "Kathy R." },
-  { text: "Hikaso did an amazing job with my hair colouring. The color is exactly what I have in mind. I have a sensitive scalp, yet my scalp feels totally fine. I would recommend him to all my friends and family.", author: "Claire L." },
-  { text: "Mako was so nice and he definitely gave me what I wanted for my perm! He is really easy to talk to, very accommodating and made me feel very comfortable throughout the time I was there!", author: "Vincent" },
-  { text: "今回もありがとうございました😊！ 美容院実は緊張しがちなのですが、いつもリラックスできて、完成もいつも自分の想像を超えていて、、、本当にありがとうございます〜🌸次はカラー楽しみにしています♪", author: "Tomishige H." },
+  { text: "Hairstylist Jamie is delicate and sweet. Throughout the haircut, she constantly asks whether I like it or not and makes me feel relaxed. I will continue to cut my hair at Jamie's from now on.", author: "Eunseong J." },
+  { text: "My stylist, Human is super knowledgeable and took all my concerns into consideration and some more! Couldn't ask for a better style. Amazing haircut experience.", author: "Julia C." },
+  { text: "Very good service from Fiona keep up the good work..very nice and clean salon with complete service with a warm water 🥂🥂", author: "Mitch" },
+  { text: "First time there and I love it! Clean, amazing customer service and my new haircut looks fabulous. Thank you Angel for your great hair styling tips 🙏🌸", author: "Elizabeth" },
+  { text: "Dolly was amazing! I was a little apprehensive with new stylists but she did a great job with layering my hair to how it naturally curls! I wish you lived in Victoria Dolly! See you again…", author: "Maria" },
+  { text: "My partner and I both went in to get a cut and colour. Both stylists were knowledgeable and professional. The colour came out looking great for both of us, and we were very happy with the haircuts.", author: "Harlan C." },
+  { text: "I'm sooo so happy with my appointment, thank you very much to the hairdresser to understand what I wanted and do a hairstyle based on my hairtype and to have done a haircut I can play with. She was very kind and so professional, I'll come again!", author: "Ora P." },
+  { text: "Hubert was wonderful! He was patient, thorough, and helped me with my hair blowout right away. I felt valued as a customer and the walk in wait time was really reasonable. I received several compliments on my hair for the rest of the day!", author: "Anna" },
+];
+
+/* ── Portfolio images ── */
+const portfolioImages = [
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-17.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-18.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-19.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-7.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-11.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-3.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-5.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-6.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-8.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-9.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-10.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-2.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-12.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-13.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-15.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-16.jpg",
 ];
 
 /* ── Hero slides data ── */
+const heroImages = [
+  "https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-hair-pic-5.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-hair-pic-7.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-hair-pic-9.jpg",
+];
+
 const heroSlides = [
   {
-    image: heroSlide1,
-    imagePositionClassName: "object-[49%_center] sm:object-[50%_center] lg:object-center",
+    image: heroImages[0],
+    imagePositionClassName: "object-center",
     content: null,
   },
   {
-    image: heroSlide3,
+    image: heroImages[1],
     imagePositionClassName: "object-center",
     contentKey: "slide2" as const,
   },
   {
-    image: heroSlide2,
+    image: heroImages[2],
     imagePositionClassName: "object-center",
     contentKey: "slide3" as const,
   },
@@ -89,7 +106,7 @@ const HeroSlider = () => {
         <motion.img
           key={current}
           src={slide.image}
-          alt="Initial Salon"
+          alt="Bisou Hair Salon"
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
@@ -281,26 +298,18 @@ const TestimonialsSection = () => {
 };
 
 /* ── Service categories with translations ── */
-const serviceKeys = ["cut", "perm", "colour", "treatment", "other"] as const;
+const serviceKeys = ["cut", "styling", "perm", "colour", "treatment", "updos"] as const;
 
 /* ── Page ── */
 const Index = () => {
   const [expandedService, setExpandedService] = useState<number | null>(0);
   const { t } = useLanguage();
 
-  useEffect(() => {
-    const s = document.createElement("script");
-    s.type = "module";
-    s.src = "https://w.behold.so/widget.js";
-    document.head.append(s);
-    return () => { s.remove(); };
-  }, []);
-
   return (
     <Layout>
       <SEOHead
-        title="Initial Salon – Where Style Meets Sophistication"
-        description="Welcome to Initial Hair Salon in Richmond, BC. Japanese and Taiwanese expertise combine for exceptional styling. Book your appointment today."
+        title="Bisou Hair Salon – Sculpting Stylish Solution"
+        description="Welcome to Bisou Hair Salon in Metrotown Mall, Burnaby. Expert haircutting, stunning colouring, and fabulous perms. Book your appointment today."
       />
 
       <HeroSlider />
@@ -327,8 +336,8 @@ const Index = () => {
               className="aspect-[4/5] overflow-hidden"
             >
               <img
-                src="https://initialsalon.com/wp-content/uploads/2024/06/initial-hair-pic-33.jpg"
-                alt="Initial Salon interior"
+                src="https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-hair-pic-7.jpg"
+                alt="Bisou Hair Salon interior"
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -346,7 +355,7 @@ const Index = () => {
 
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-4 gap-y-8 md:gap-x-5 md:gap-y-10"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8 md:gap-x-5 md:gap-y-10"
           >
             {stylists.map((s, i) => (
               <motion.div key={s.name} variants={reveal} custom={i} className="text-center group">
@@ -442,8 +451,44 @@ const Index = () => {
             <motion.span variants={reveal} custom={0} className="section-label">{t(translations.portfolio.label)}</motion.span>
             <motion.h2 variants={reveal} custom={1} className="section-title">{t(translations.portfolio.title)}</motion.h2>
           </motion.div>
-          {/* @ts-ignore */}
-          <behold-widget feed-id="9Cg03AgPL9WyaEb5o8tX"></behold-widget>
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3"
+          >
+            {portfolioImages.map((img, i) => (
+              <motion.div key={img} variants={reveal} custom={i} className="aspect-square overflow-hidden bg-muted">
+                <img src={img} alt={`Bisou Hair Salon portfolio ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════ PROMOTION ═══════ */}
+      <section className="py-16 md:py-28 lg:py-32">
+        <div className="container-site">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>
+              <motion.span variants={reveal} custom={0} className="section-label">{t(translations.promotion.label)}</motion.span>
+              <motion.h2 variants={reveal} custom={1} className="section-title mb-6">{t(translations.promotion.title)}</motion.h2>
+              <motion.p variants={reveal} custom={2} className="font-body text-muted-foreground leading-[1.8] text-base">
+                {t(translations.promotion.description)}
+              </motion.p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.65 }}
+              className="aspect-[4/3] overflow-hidden"
+            >
+              <img
+                src="https://bisouvancouver.com/wp-content/uploads/2024/08/bisoul-hair-pic-88.jpg"
+                alt="Bisou Hair Salon products"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -451,7 +496,7 @@ const Index = () => {
       <TestimonialsSection />
 
       {/* ═══════ CONTACT + INFO ═══════ */}
-      <section className="py-16 md:py-28 lg:py-32">
+      <section id="contact" className="py-16 md:py-28 lg:py-32">
         <div className="container-site">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
             {/* Left — info */}
@@ -464,21 +509,21 @@ const Index = () => {
                   <Phone className="w-4 h-4 mt-1 text-muted-foreground flex-shrink-0" />
                   <div>
                     <p className="font-body text-[12px] font-semibold uppercase tracking-wider text-muted-foreground mb-1">{t(translations.contact.phone)}</p>
-                    <a href="tel:604-715-7888" className="font-body text-[15px] text-foreground hover:text-secondary transition-colors">604-715-7888</a>
+                    <a href="tel:604-451-1552" className="font-body text-[15px] text-foreground hover:text-secondary transition-colors">604-451-1552</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <MapPin className="w-4 h-4 mt-1 text-muted-foreground flex-shrink-0" />
                   <div>
                     <p className="font-body text-[12px] font-semibold uppercase tracking-wider text-muted-foreground mb-1">{t(translations.contact.address)}</p>
-                    <p className="font-body text-[15px] text-foreground">#151 - 6386 No. 3 Rd., Richmond, BC</p>
+                    <p className="font-body text-[15px] text-foreground">#392 - 4800 Kingsway, Burnaby, BC</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <Clock className="w-4 h-4 mt-1 text-muted-foreground flex-shrink-0" />
                   <div>
                     <p className="font-body text-[12px] font-semibold uppercase tracking-wider text-muted-foreground mb-1">{t(translations.contact.hours)}</p>
-                    <p className="font-body text-[15px] text-foreground">{t(translations.contact.hoursValue)}</p>
+                    <p className="font-body text-[15px] text-foreground whitespace-pre-line">{t(translations.contact.hoursValue)}</p>
                   </div>
                 </div>
               </div>
@@ -493,8 +538,8 @@ const Index = () => {
             {/* Right — map */}
             <div className="aspect-video lg:aspect-auto overflow-hidden bg-muted">
               <iframe
-                title="Initial Salon Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2610.5!2d-123.1368!3d49.1707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDEwJzE0LjUiTiAxMjPCsDA4JzEyLjUiVw!5e0!3m2!1sen!2sca!4v1700000000000"
+                title="Bisou Hair Salon Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.5!2d-123.0083!3d49.2276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548676e2e4f0e3b7%3A0x7c3a7d1c5e8f2a00!2s4800%20Kingsway%2C%20Burnaby%2C%20BC!5e0!3m2!1sen!2sca!4v1700000000000"
                 className="w-full h-full min-h-[280px] border-0"
                 loading="lazy"
                 allowFullScreen
