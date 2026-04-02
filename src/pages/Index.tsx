@@ -7,6 +7,7 @@ import SEOHead from "@/components/SEOHead";
 import useEmblaCarousel from "embla-carousel-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
+import aboutImage from "@/assets/bisoul-hair-pic-88.jpg";
 
 const BOOKING_URL =
   "https://www.fresha.com/book-now/bisou-hair-salon-zc41qh7e/all-offer?share=true&pId=129242";
