@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, Phone, MapPin, Clock, ChevronDown, Send, Instagram } from "lucide-react";
+import SocialIcons from "@/components/SocialIcons";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import useEmblaCarousel from "embla-carousel-react";
@@ -12,14 +13,14 @@ const BOOKING_URL =
 
 /* ── Stylists Data ── */
 const stylists = [
-  { name: "DONNA", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-42.jpg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
-  { name: "VIVI", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-44.jpg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
-  { name: "FIONA", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-40.jpg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
-  { name: "ANGEL", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2025/03/%E6%9C%AA%E5%91%BD%E5%90%8D%E8%A8%AD%E8%A8%88.png-1.jpeg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
-  { name: "DOLLY", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-39.jpg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
-  { name: "HUBERT", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-46.jpg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
-  { name: "YUWEI", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-pic-yu-we5.jpg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
-  { name: "JAMIE", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-pic-jamie2.jpg", instagram: "https://www.instagram.com/bisou_hair_salon/" },
+  { name: "DONNA", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-42.jpg", instagram: "" },
+  { name: "VIVI", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-44.jpg", instagram: "https://www.instagram.com/kuvivi9531?igsh=Z2poMnNpajh6Zmhs" },
+  { name: "FIONA", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-40.jpg", instagram: "https://www.instagram.com/fionachung1133?igsh=Ym9kdWpjZDkxcW1z" },
+  { name: "ANGEL", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2025/03/%E6%9C%AA%E5%91%BD%E5%90%8D%E8%A8%AD%E8%A8%88.png-1.jpeg", instagram: "https://www.instagram.com/bisou_angel1015?igsh=YXcwbnQ4NGR4ZnV6" },
+  { name: "DOLLY", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-39.jpg", instagram: "https://www.instagram.com/superjuniordolly?igsh=MW11dXZ0bzhkNHI0MA%3D%3D" },
+  { name: "HUBERT", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-46.jpg", instagram: "https://www.instagram.com/hubert_hairstar?igsh=ZjVhaWJtaDJ3bTI2" },
+  { name: "YUWEI", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-pic-yu-we5.jpg", instagram: "https://www.instagram.com/uway2day/" },
+  { name: "JAMIE", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-pic-jamie2.jpg", instagram: "https://www.instagram.com/jamie_vanhair?igsh=eWkxaXNjYnZtdzdt" },
 ];
 
 const testimonials = [
@@ -63,7 +64,7 @@ const heroImages = [
 const heroSlides = [
   {
     image: heroImages[0],
-    imagePositionClassName: "object-center",
+    imagePositionClassName: "object-bottom",
     content: null,
   },
   {
@@ -327,6 +328,9 @@ const Index = () => {
               <motion.p variants={reveal} custom={3} className="font-body text-muted-foreground leading-[1.8] text-base">
                 {t(translations.about.p2)}
               </motion.p>
+              <motion.div variants={reveal} custom={4} className="mt-6">
+                <SocialIcons />
+              </motion.div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
@@ -336,7 +340,7 @@ const Index = () => {
               className="aspect-[4/5] overflow-hidden"
             >
               <img
-                src="https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-hair-pic-7.jpg"
+                src="https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-hair-pic-9.jpg"
                 alt="Bisou Hair Salon interior"
                 className="w-full h-full object-cover"
               />
@@ -369,9 +373,11 @@ const Index = () => {
                 </div>
                 <div className="flex items-center justify-center gap-1.5">
                   <h3 className="font-heading text-sm md:text-[15px] font-bold text-foreground tracking-wide">{s.name}</h3>
-                  <a href={s.instagram} target="_blank" rel="noopener noreferrer" aria-label={`${s.name} Instagram`} className="text-muted-foreground hover:text-foreground transition-colors">
-                    <Instagram className="w-3.5 h-3.5" />
-                  </a>
+                  {s.instagram && (
+                    <a href={s.instagram} target="_blank" rel="noopener noreferrer" aria-label={`${s.name} Instagram`} className="text-muted-foreground hover:text-foreground transition-colors">
+                      <Instagram className="w-3.5 h-3.5" />
+                    </a>
+                  )}
                 </div>
                 {s.title && <p className="font-body text-[11px] md:text-[12px] text-muted-foreground mt-0.5 tracking-wider uppercase">{s.title}</p>}
               </motion.div>
