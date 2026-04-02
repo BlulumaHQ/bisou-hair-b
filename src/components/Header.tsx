@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Menu, X } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher";
+import bisouLogo from "@/assets/bisou-logo.webp";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 
@@ -53,7 +54,7 @@ const Header = () => {
           className="flex-shrink-0"
         >
           <img
-            src="https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-Hair-salon-logo.png"
+            src={bisouLogo}
             alt="Bisou Hair Salon"
             className="h-[54px] md:h-[64px] w-auto"
           />

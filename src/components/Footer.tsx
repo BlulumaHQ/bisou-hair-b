@@ -2,8 +2,7 @@ import { Phone, MapPin, Clock } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import SocialIcons from "./SocialIcons";
-
-const BISOU_LOGO = "https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-Hair-salon-logo.png";
+import bisouLogo from "@/assets/bisou-logo.webp";
 
 const handleAnchor = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
   e.preventDefault();
@@ -30,7 +29,7 @@ const Footer = () => {
           {/* Column 1: Logo + tagline + social */}
           <div className="col-span-1">
             <a href="#home" onClick={(e) => handleAnchor(e, "#home")} className="inline-block mb-4">
-              <img src={BISOU_LOGO} alt="Bisou Hair Salon" className="h-[50px] w-auto" />
+              <img src={bisouLogo} alt="Bisou Hair Salon" className="h-[50px] w-auto" />
             </a>
             <p className="font-body text-[14px] text-muted-foreground leading-relaxed mb-5">
               {t(translations.footer.tagline)}
@@ -55,7 +54,19 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4: Contact */}
+          {/* Column 4: Careers */}
+          <div className="col-span-1">
+            <h4 className="font-body text-[11px] font-semibold tracking-[0.14em] uppercase text-foreground mb-5">{t(translations.footer.careers)}</h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="#join-team" onClick={(e) => handleAnchor(e, "#join-team")} className="font-body text-[15px] text-muted-foreground hover:text-foreground transition-colors">
+                  {t(translations.nav.joinTeam)}
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 5: Contact */}
           <div className="col-span-1">
             <h4 className="font-body text-[11px] font-semibold tracking-[0.14em] uppercase text-foreground mb-5">{t(translations.footer.contactTitle)}</h4>
             <ul className="space-y-4">
@@ -75,30 +86,13 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-          {/* Column 5: Additional info */}
-          <div className="col-span-1">
-            <h4 className="font-body text-[11px] font-semibold tracking-[0.14em] uppercase text-foreground mb-5">{t(translations.footer.quickLinks)}</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#stylists" onClick={(e) => handleAnchor(e, "#stylists")} className="font-body text-[15px] text-muted-foreground hover:text-foreground transition-colors">
-                  {t(translations.nav.stylists)}
-                </a>
-              </li>
-              <li>
-                <a href="#portfolio" onClick={(e) => handleAnchor(e, "#portfolio")} className="font-body text-[15px] text-muted-foreground hover:text-foreground transition-colors">
-                  {t(translations.nav.portfolio)}
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
 
         {/* Mobile layout */}
         <div className="md:hidden">
           <div className="text-center mb-6">
             <a href="#home" onClick={(e) => handleAnchor(e, "#home")} className="inline-block mb-4">
-              <img src={BISOU_LOGO} alt="Bisou Hair Salon" className="h-[44px] w-auto mx-auto" />
+              <img src={bisouLogo} alt="Bisou Hair Salon" className="h-[44px] w-auto mx-auto" />
             </a>
             <SocialIcons className="justify-center" />
           </div>
