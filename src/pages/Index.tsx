@@ -334,7 +334,7 @@ const Index = () => {
               className="aspect-[4/5] overflow-hidden"
             >
               <img
-                src="https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-hair-pic-9.jpg"
+                src={aboutImage}
                 alt="Bisou Hair Salon interior"
                 className="w-full h-full object-cover"
               />
