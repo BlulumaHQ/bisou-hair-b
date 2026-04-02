@@ -226,6 +226,7 @@ export const translations = {
     },
     navigation: { en: "Navigation", zh: "網站導覽" },
     quickLinks: { en: "Quick Links", zh: "快速連結" },
+    careers: { en: "Careers", zh: "招募" },
     contactTitle: { en: "Contact", zh: "聯繫方式" },
     hoursShort: {
       en: "Mon–Sat: 10 am–9 pm\nSun/Holiday: 11 am–7 pm",
