@@ -53,7 +53,7 @@ const Header = () => {
           className="flex-shrink-0"
         >
           <img
-            src="https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-Hair-salon-logo.png"
+            src={bisouLogo}
             alt="Bisou Hair Salon"
             className="h-[54px] md:h-[64px] w-auto"
           />
