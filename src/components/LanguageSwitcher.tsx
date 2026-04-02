@@ -4,7 +4,6 @@ import type { Lang } from "@/i18n/translations";
 const options: { value: Lang; label: string }[] = [
   { value: "en", label: "EN" },
   { value: "zh", label: "中文" },
-  { value: "ja", label: "日本語" },
 ];
 
 const LanguageSwitcher = () => {

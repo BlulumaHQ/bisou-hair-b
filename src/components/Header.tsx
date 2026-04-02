@@ -5,8 +5,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 
 const BOOKING_URL =
-  "https://www.fresha.com/a/initial-salon-richmond-6386-no-3-road-kr9spcrw/all-offer?menu=true&rwg_token=AJKvS9UQy7d34XWVYz7Y2UcNMMI0llYMKBzKtJ-ix_hcoOULUtHkYyx4zXbut-9xmCflwhAa8Da7oKG28yDyZbEloWPcwryVjw%3D%3D&gei=7VnqZrP2Aorx0PEPoLbVsQ8";
-const SHOP_URL = "https://www.fresha.com/store/initial-salon-store-ariubv76";
+  "https://www.fresha.com/book-now/bisou-hair-salon-zc41qh7e/all-offer?share=true&pId=129242";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +17,7 @@ const Header = () => {
     { label: t(translations.nav.stylists), href: "#stylists" },
     { label: t(translations.nav.services), href: "#services" },
     { label: t(translations.nav.portfolio), href: "#portfolio" },
-    { label: t(translations.nav.joinTeam), href: "#join-team" },
+    { label: t(translations.nav.contact), href: "#contact" },
   ];
 
   useEffect(() => {
@@ -54,8 +53,8 @@ const Header = () => {
           className="flex-shrink-0"
         >
           <img
-            src="https://initialsalon.com/wp-content/uploads/2024/06/initial-Hair-salon-logo.png"
-            alt="Initial Salon"
+            src="https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-Hair-salon-logo.png"
+            alt="Bisou Hair Salon"
             className="h-[54px] md:h-[64px] w-auto"
           />
         </a>
@@ -72,14 +71,6 @@ const Header = () => {
               {link.label}
             </a>
           ))}
-          <a
-            href={SHOP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body text-[11px] tracking-[0.16em] font-medium text-foreground/55 hover:text-foreground transition-colors"
-          >
-            {t(translations.nav.shop)}
-          </a>
         </nav>
 
         {/* Desktop: Language + CTA */}
@@ -122,14 +113,6 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
-            <a
-              href={SHOP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-body text-[15px] tracking-[0.1em] font-medium text-foreground py-4 border-b border-border/50"
-            >
-              {t(translations.nav.shop)} ↗
-            </a>
             <a
               href={BOOKING_URL}
               target="_blank"
