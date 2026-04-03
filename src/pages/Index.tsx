@@ -14,6 +14,16 @@ import portfolio13 from "@/assets/portfolio/bisou-hair-vancouver-13.webp";
 import portfolio14 from "@/assets/portfolio/bisou-hair-vancouver-14.webp";
 import portfolio15 from "@/assets/portfolio/bisou-hair-vancouver-15.webp";
 import portfolio16 from "@/assets/portfolio/bisou-hair-vancouver-16.webp";
+import portfolio05 from "@/assets/portfolio/bisou-hair-vancouver-05.webp";
+import portfolio06 from "@/assets/portfolio/bisou-hair-vancouver-06.webp";
+import portfolio07 from "@/assets/portfolio/bisou-hair-vancouver-07.webp";
+import portfolio08 from "@/assets/portfolio/bisou-hair-vancouver-08.webp";
+import portfolio09 from "@/assets/portfolio/bisou-hair-vancouver-09.webp";
+import portfolio10 from "@/assets/portfolio/bisou-hair-vancouver-10.webp";
+import portfolio11 from "@/assets/portfolio/bisou-hair-vancouver-11.webp";
+import portfolio12 from "@/assets/portfolio/bisou-hair-vancouver-12.webp";
+import stylistJamie from "@/assets/stylists/jamie.webp";
+import stylistYuwei from "@/assets/stylists/yuwei.webp";
 
 const BOOKING_URL =
   "https://www.fresha.com/book-now/bisou-hair-salon-zc41qh7e/all-offer?share=true&pId=129242";
@@ -26,8 +36,8 @@ const stylists = [
   { name: "ANGEL", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2025/03/%E6%9C%AA%E5%91%BD%E5%90%8D%E8%A8%AD%E8%A8%88.png-1.jpeg", instagram: "https://www.instagram.com/bisou_angel1015?igsh=YXcwbnQ4NGR4ZnV6" },
   { name: "DOLLY", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-39.jpg", instagram: "https://www.instagram.com/superjuniordolly?igsh=MW11dXZ0bzhkNHI0MA%3D%3D" },
   { name: "HUBERT", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-46.jpg", instagram: "https://www.instagram.com/hubert_hairstar?igsh=ZjVhaWJtaDJ3bTI2" },
-  { name: "YUWEI", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-pic-yu-we5.jpg", instagram: "https://www.instagram.com/uway2day/" },
-  { name: "JAMIE", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-pic-jamie2.jpg", instagram: "https://www.instagram.com/jamie_vanhair?igsh=eWkxaXNjYnZtdzdt" },
+  { name: "YUWEI", title: "Stylist", img: stylistYuwei, instagram: "https://www.instagram.com/uway2day/" },
+  { name: "JAMIE", title: "Stylist", img: stylistJamie, instagram: "https://www.instagram.com/jamie_vanhair?igsh=eWkxaXNjYnZtdzdt" },
 ];
 
 const testimonials = [
@@ -47,18 +57,18 @@ const portfolioImages = [
   portfolio14,
   portfolio15,
   portfolio16,
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-11.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-3.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-5.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-6.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-8.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-9.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-10.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-2.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-12.jpg",
+  portfolio05,
+  portfolio06,
+  portfolio07,
+  portfolio08,
+  portfolio09,
+  portfolio10,
+  portfolio11,
+  portfolio12,
   "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-13.jpg",
   "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-15.jpg",
   "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-16.jpg",
+  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-2.jpg",
 ];
 
 /* ── Hero slides data ── */
