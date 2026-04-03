@@ -14,6 +14,16 @@ import portfolio13 from "@/assets/portfolio/bisou-hair-vancouver-13.webp";
 import portfolio14 from "@/assets/portfolio/bisou-hair-vancouver-14.webp";
 import portfolio15 from "@/assets/portfolio/bisou-hair-vancouver-15.webp";
 import portfolio16 from "@/assets/portfolio/bisou-hair-vancouver-16.webp";
+import portfolio05 from "@/assets/portfolio/bisou-hair-vancouver-05.webp";
+import portfolio06 from "@/assets/portfolio/bisou-hair-vancouver-06.webp";
+import portfolio07 from "@/assets/portfolio/bisou-hair-vancouver-07.webp";
+import portfolio08 from "@/assets/portfolio/bisou-hair-vancouver-08.webp";
+import portfolio09 from "@/assets/portfolio/bisou-hair-vancouver-09.webp";
+import portfolio10 from "@/assets/portfolio/bisou-hair-vancouver-10.webp";
+import portfolio11 from "@/assets/portfolio/bisou-hair-vancouver-11.webp";
+import portfolio12 from "@/assets/portfolio/bisou-hair-vancouver-12.webp";
+import stylistJamie from "@/assets/stylists/jamie.webp";
+import stylistYuwei from "@/assets/stylists/yuwei.webp";
 
 const BOOKING_URL =
   "https://www.fresha.com/book-now/bisou-hair-salon-zc41qh7e/all-offer?share=true&pId=129242";
