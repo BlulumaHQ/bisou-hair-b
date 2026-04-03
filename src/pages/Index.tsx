@@ -63,8 +63,8 @@ const portfolioImages = [
 
 /* ── Hero slides data ── */
 const heroImages = [
-  "https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-hair-pic-7.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-hair-pic-9.jpg",
+  heroImage1,
+  heroImage2,
 ];
 
 const heroSlides = [
