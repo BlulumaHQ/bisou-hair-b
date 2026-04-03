@@ -7,7 +7,13 @@ import SEOHead from "@/components/SEOHead";
 import useEmblaCarousel from "embla-carousel-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
-import aboutImage from "@/assets/bisoul-hair-pic-88.jpg";
+import aboutImage from "@/assets/bisou-hair-about.jpg";
+import heroImage1 from "@/assets/hero/bisou-hair-hero-1.webp";
+import heroImage2 from "@/assets/hero/bisou-hair-hero-2.webp";
+import portfolio13 from "@/assets/portfolio/bisou-hair-vancouver-13.webp";
+import portfolio14 from "@/assets/portfolio/bisou-hair-vancouver-14.webp";
+import portfolio15 from "@/assets/portfolio/bisou-hair-vancouver-15.webp";
+import portfolio16 from "@/assets/portfolio/bisou-hair-vancouver-16.webp";
 
 const BOOKING_URL =
   "https://www.fresha.com/book-now/bisou-hair-salon-zc41qh7e/all-offer?share=true&pId=129242";
@@ -37,10 +43,10 @@ const testimonials = [
 
 /* ── Portfolio images ── */
 const portfolioImages = [
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-17.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-18.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-19.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-7.jpg",
+  portfolio13,
+  portfolio14,
+  portfolio15,
+  portfolio16,
   "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-11.jpg",
   "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-3.jpg",
   "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-5.jpg",
@@ -57,8 +63,8 @@ const portfolioImages = [
 
 /* ── Hero slides data ── */
 const heroImages = [
-  "https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-hair-pic-7.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/06/bisoul-hair-pic-9.jpg",
+  heroImage1,
+  heroImage2,
 ];
 
 const heroSlides = [
