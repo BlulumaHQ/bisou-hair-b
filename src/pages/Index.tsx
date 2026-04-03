@@ -43,10 +43,10 @@ const testimonials = [
 
 /* ── Portfolio images ── */
 const portfolioImages = [
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-17.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-18.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-19.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-7.jpg",
+  portfolio13,
+  portfolio14,
+  portfolio15,
+  portfolio16,
   "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-11.jpg",
   "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-3.jpg",
   "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-5.jpg",
