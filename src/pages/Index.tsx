@@ -7,7 +7,13 @@ import SEOHead from "@/components/SEOHead";
 import useEmblaCarousel from "embla-carousel-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
-import aboutImage from "@/assets/bisoul-hair-pic-88.jpg";
+import aboutImage from "@/assets/bisou-hair-about.jpg";
+import heroImage1 from "@/assets/hero/bisou-hair-hero-1.webp";
+import heroImage2 from "@/assets/hero/bisou-hair-hero-2.webp";
+import portfolio13 from "@/assets/portfolio/bisou-hair-vancouver-13.webp";
+import portfolio14 from "@/assets/portfolio/bisou-hair-vancouver-14.webp";
+import portfolio15 from "@/assets/portfolio/bisou-hair-vancouver-15.webp";
+import portfolio16 from "@/assets/portfolio/bisou-hair-vancouver-16.webp";
 
 const BOOKING_URL =
   "https://www.fresha.com/book-now/bisou-hair-salon-zc41qh7e/all-offer?share=true&pId=129242";
