@@ -75,10 +75,10 @@ const portfolioImages = [
   portfolio10,
   portfolio11,
   portfolio12,
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-13.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-15.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-16.jpg",
-  "https://bisouvancouver.com/wp-content/uploads/2024/09/bisoul-hair-portfolio-2.jpg",
+  portfolio01,
+  portfolio02,
+  portfolio03,
+  portfolio04,
 ];
 
 /* ── Hero slides data ── */
