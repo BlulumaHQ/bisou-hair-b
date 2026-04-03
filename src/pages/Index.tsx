@@ -40,12 +40,12 @@ const BOOKING_URL =
 
 /* ── Stylists Data ── */
 const stylists = [
-  { name: "DONNA", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-42.jpg", instagram: "" },
-  { name: "VIVI", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-44.jpg", instagram: "https://www.instagram.com/kuvivi9531?igsh=Z2poMnNpajh6Zmhs" },
-  { name: "FIONA", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-40.jpg", instagram: "https://www.instagram.com/fionachung1133?igsh=Ym9kdWpjZDkxcW1z" },
-  { name: "ANGEL", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2025/03/%E6%9C%AA%E5%91%BD%E5%90%8D%E8%A8%AD%E8%A8%88.png-1.jpeg", instagram: "https://www.instagram.com/bisou_angel1015?igsh=YXcwbnQ4NGR4ZnV6" },
-  { name: "DOLLY", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-39.jpg", instagram: "https://www.instagram.com/superjuniordolly?igsh=MW11dXZ0bzhkNHI0MA%3D%3D" },
-  { name: "HUBERT", title: "Stylist", img: "https://bisouvancouver.com/wp-content/uploads/2024/08/initial-hair-pic-46.jpg", instagram: "https://www.instagram.com/hubert_hairstar?igsh=ZjVhaWJtaDJ3bTI2" },
+  { name: "DONNA", title: "Stylist", img: stylistDonna, instagram: "" },
+  { name: "VIVI", title: "Stylist", img: stylistVivi, instagram: "https://www.instagram.com/kuvivi9531?igsh=Z2poMnNpajh6Zmhs" },
+  { name: "FIONA", title: "Stylist", img: stylistFiona, instagram: "https://www.instagram.com/fionachung1133?igsh=Ym9kdWpjZDkxcW1z" },
+  { name: "ANGEL", title: "Stylist", img: stylistAngel, instagram: "https://www.instagram.com/bisou_angel1015?igsh=YXcwbnQ4NGR4ZnV6" },
+  { name: "DOLLY", title: "Stylist", img: stylistDolly, instagram: "https://www.instagram.com/superjuniordolly?igsh=MW11dXZ0bzhkNHI0MA%3D%3D" },
+  { name: "HUBERT", title: "Stylist", img: stylistHubert, instagram: "https://www.instagram.com/hubert_hairstar?igsh=ZjVhaWJtaDJ3bTI2" },
   { name: "YUWEI", title: "Stylist", img: stylistYuwei, instagram: "https://www.instagram.com/uway2day/" },
   { name: "JAMIE", title: "Stylist", img: stylistJamie, instagram: "https://www.instagram.com/jamie_vanhair?igsh=eWkxaXNjYnZtdzdt" },
 ];
