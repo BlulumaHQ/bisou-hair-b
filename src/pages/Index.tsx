@@ -8,6 +8,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import aboutImage from "@/assets/bisou-hair-about.jpg";
+import productsImage from "@/assets/bisoul-hair-pic-88.webp";
 import heroImage1 from "@/assets/hero/bisou-hair-hero-1.webp";
 import heroImage2 from "@/assets/hero/bisou-hair-hero-2.webp";
 import portfolio13 from "@/assets/portfolio/bisou-hair-vancouver-13.webp";
