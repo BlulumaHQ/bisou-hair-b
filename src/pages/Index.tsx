@@ -92,7 +92,7 @@ const heroSlides = [
   {
     image: heroImages[0],
     imagePositionClassName: "object-center",
-    contentKey: "slide2" as const,
+    contentKey: undefined,
   },
   {
     image: heroImages[1],
