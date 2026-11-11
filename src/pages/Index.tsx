@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Star, Phone, MapPin, Clock, ChevronDown, Send, Instagram } from "lucide-react";
 import SocialIcons from "@/components/SocialIcons";
 import Layout from "@/components/Layout";
+import JoinTeamForm from "@/components/JoinTeamForm";
 import SEOHead from "@/components/SEOHead";
 import useEmblaCarousel from "embla-carousel-react";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -588,27 +589,17 @@ const Index = () => {
             </motion.p>
           </motion.div>
 
-          {/* Simple contact form */}
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            className="text-left space-y-5 max-w-md mx-auto"
-          >
-            <div>
-              <label className="font-body text-[12px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5 block">{t(translations.joinTeam.nameLabel)}</label>
-              <input type="text" className="w-full border border-border bg-background px-4 py-3.5 font-body text-[15px] text-foreground focus:outline-none focus:border-foreground/30 transition-colors" placeholder={t(translations.joinTeam.namePlaceholder)} />
-            </div>
-            <div>
-              <label className="font-body text-[12px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5 block">{t(translations.joinTeam.emailLabel)}</label>
-              <input type="email" className="w-full border border-border bg-background px-4 py-3.5 font-body text-[15px] text-foreground focus:outline-none focus:border-foreground/30 transition-colors" placeholder={t(translations.joinTeam.emailPlaceholder)} />
-            </div>
-            <div>
-              <label className="font-body text-[12px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5 block">{t(translations.joinTeam.messageLabel)}</label>
-              <textarea rows={4} className="w-full border border-border bg-background px-4 py-3.5 font-body text-[15px] text-foreground focus:outline-none focus:border-foreground/30 transition-colors resize-none" placeholder={t(translations.joinTeam.messagePlaceholder)} />
-            </div>
-            <button type="submit" className="btn-primary w-full gap-2 justify-center py-4">
-              <Send className="w-3.5 h-3.5" /> {t(translations.joinTeam.submit)}
-            </button>
-          </form>
+          <JoinTeamForm
+            labels={{
+              nameLabel: t(translations.joinTeam.nameLabel),
+              namePlaceholder: t(translations.joinTeam.namePlaceholder),
+              emailLabel: t(translations.joinTeam.emailLabel),
+              emailPlaceholder: t(translations.joinTeam.emailPlaceholder),
+              messageLabel: t(translations.joinTeam.messageLabel),
+              messagePlaceholder: t(translations.joinTeam.messagePlaceholder),
+              submit: t(translations.joinTeam.submit),
+            }}
+          />
         </div>
       </section>
     </Layout>
