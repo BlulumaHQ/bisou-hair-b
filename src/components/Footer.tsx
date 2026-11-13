@@ -137,7 +137,7 @@ const Footer = () => {
           <p className="font-body text-[12px] text-muted-foreground leading-relaxed">
             © 2026 Bisou Hair Salon. All rights reserved. |{" "}
             Web Design by{" "}
-            <a href="https://bluluma.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground underline underline-offset-2">Bluluma</a>
+            <a href="https://sonykundesign.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground underline underline-offset-2">Sonykun Design</a>
           </p>
         </div>
       </div>
